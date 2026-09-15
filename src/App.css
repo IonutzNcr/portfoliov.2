@@ -22,6 +22,19 @@ body {
   font-family: Inter, 'Segoe UI', sans-serif;
 }
 
+.stitch-shell {
+  width: 100%;
+  min-height: 100vh;
+  background: #090d1a;
+}
+
+.stitch-frame {
+  width: 100%;
+  min-height: 100vh;
+  border: 0;
+  display: block;
+}
+
 a {
   color: inherit;
 }
@@ -119,6 +132,13 @@ a {
   color: #94a3b8;
   text-decoration: none;
   padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-actions > a .material-symbols-outlined {
+  font-size: 18px;
 }
 
 .header-actions > a:hover {
@@ -346,6 +366,11 @@ a {
   border-bottom: 1px solid rgba(30, 41, 59, 0.6);
 }
 
+.competences {
+  padding: 80px 0;
+  border-top: 1px solid rgba(30, 41, 59, 0.6);
+}
+
 .section-kicker {
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
@@ -376,6 +401,46 @@ a {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 32px;
+}
+
+.tech-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.tech-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(30, 41, 59, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.tech-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #e2e8f0;
+  border: 1px solid rgba(71, 85, 105, 0.8);
+  background: rgba(30, 41, 59, 0.65);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+}
+
+.tech-card span {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #e2e8f0;
 }
 
 .project-card {
@@ -444,6 +509,9 @@ a {
 .project-card__footer a {
   text-decoration: none;
   color: #7dd3fc;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .project-card__footer a:hover {
@@ -461,10 +529,32 @@ a {
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 10px;
+  gap: 12px;
   font-family: 'JetBrains Mono', monospace;
   color: #cbd5e1;
   font-size: 13px;
+}
+
+.contact-copy li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  color: #7dd3fc;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.contact-icon .material-symbols-outlined {
+  font-size: 18px;
 }
 
 .contact-form-wrap {
@@ -518,6 +608,10 @@ a {
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .contact-form button:hover {
@@ -565,6 +659,10 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .tech-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .contact__container {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -578,6 +676,10 @@ a {
 
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .field-grid {
@@ -607,6 +709,10 @@ a {
 
   .soft-grid {
     grid-template-columns: 1fr;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .header-actions a:not(.contact-cta) {
