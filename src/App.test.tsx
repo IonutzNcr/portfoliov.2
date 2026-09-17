@@ -2,11 +2,13 @@ import { render, screen } from '@testing-library/react'
 import App from './App'
 
 describe('App', () => {
-  it('renders the exact stitch mockup iframe', () => {
+  it('renders home page fully with migrated sections', () => {
     render(<App />)
 
-    const iframe = screen.getByTitle(/stitch portfolio mockup/i)
-    expect(iframe).toBeInTheDocument()
-    expect(iframe).toHaveAttribute('src', '/stitch-mockup.html')
+    expect(screen.getByTestId('home-page')).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Ionut Nicoara/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Stack & Technologies/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Projets Selectionnes/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Discutons de vos projets/i })).toBeInTheDocument()
   })
 })
