@@ -6,9 +6,9 @@ describe('ProjectsSection', () => {
   it('renders projects heading and project cards', () => {
     render(<ProjectsSection section={PROJECTS_SECTION} />)
 
-    expect(screen.getByRole('heading', { name: /Projets Selectionnes/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Projets Sélectionnés/i })).toBeInTheDocument()
     expect(screen.getByText(/ft_irc - Serveur IRC/i)).toBeInTheDocument()
-    expect(screen.getByText(/Minishell - Interpreteur UNIX/i)).toBeInTheDocument()
-    expect(screen.getAllByRole('link', { name: /Depot/i })).toHaveLength(4)
+    expect(screen.getByText(/Minishell - Interpréteur UNIX/i)).toBeInTheDocument()
+    expect(screen.getAllByRole('link', { name: /Dépôt/i })).toHaveLength(4)
   })
 })

@@ -7,7 +7,7 @@ describe('StackSection', () => {
     render(<StackSection section={STACK_SECTION} />)
 
     expect(screen.getByRole('heading', { name: /Stack & Technologies/i })).toBeInTheDocument()
-    expect(screen.getByText(/Competences articulees/i)).toBeInTheDocument()
+    expect(screen.getByText(/Compétences articulées/i)).toBeInTheDocument()
     expect(screen.getByRole('img', { name: /C logo/i })).toBeInTheDocument()
     expect(screen.getByRole('img', { name: /Docker logo/i })).toBeInTheDocument()
     expect(screen.getByText(/^C\+\+$/i)).toBeInTheDocument()

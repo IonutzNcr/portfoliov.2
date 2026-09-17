@@ -13,12 +13,12 @@ describe('HomePage', () => {
 
     expect(screen.getByRole('heading', { name: /Ionut Nicoara/i })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /Stack & Technologies/i })).toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: /Projets Selectionnes/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Projets Sélectionnés/i })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /Discutons de vos projets/i })).toBeInTheDocument()
 
     const primaryNav = screen.getByRole('navigation', { name: /Primary/i })
     expect(within(primaryNav).getByRole('link', { name: /Profil/i })).toHaveAttribute('href', '#profil')
-    expect(within(primaryNav).getByRole('link', { name: /Competences/i })).toHaveAttribute(
+    expect(within(primaryNav).getByRole('link', { name: /Compétences/i })).toHaveAttribute(
       'href',
       '#competences',
     )
@@ -28,9 +28,9 @@ describe('HomePage', () => {
       '#contact',
     )
 
-    expect(screen.getByLabelText(/Nom et Prenom/i)).toBeInTheDocument()
+    expect(screen.getByLabelText(/Nom et Prénom/i)).toBeInTheDocument()
     expect(screen.getByLabelText(/Email professionnel/i)).toBeInTheDocument()
-    expect(screen.getByLabelText(/Objet \/ Type d opportunite/i)).toBeInTheDocument()
+    expect(screen.getByLabelText(/Objet \/ Type d’opportunité/i)).toBeInTheDocument()
     expect(screen.getByLabelText(/Message/i)).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /Envoyer le message/i })).toBeInTheDocument()
   })

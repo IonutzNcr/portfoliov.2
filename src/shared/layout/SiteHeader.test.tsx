@@ -17,7 +17,7 @@ describe('SiteHeader', () => {
 
     expect(screen.getByText(/Ionut Nicoara/i)).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Profil/i })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /Competences/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Compétences/i })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Me contacter/i })).toBeInTheDocument()
   })
 })

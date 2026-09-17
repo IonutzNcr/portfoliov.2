@@ -2,9 +2,9 @@ import type { ContactSectionData, FooterData } from '../types/contact.types'
 
 export const CONTACT_SECTION: ContactSectionData = {
   kicker: 'Contact',
-  title: 'Discutons de vos projets & opportunites',
+  title: 'Discutons de vos projets & opportunités',
   description:
-    'Vous recherchez un developpeur curieux, rigoureux et motive pour contribuer a vos projets ? Echangeons !',
+    'Vous recherchez un développeur curieux, rigoureux et motivé pour contribuer à vos projets ? Échangeons !',
   details: [
     {
       icon: 'mail',
@@ -13,11 +13,11 @@ export const CONTACT_SECTION: ContactSectionData = {
     },
     {
       icon: 'location_on',
-      label: 'Paris, Ile-de-France - Stage de 6 mois',
+      label: 'Paris, Île-de-France - Stage de 6 mois',
     },
     {
       icon: 'verified',
-      label: 'Disponibilite immediate - Reponse sous 24h',
+      label: 'Disponibilité immédiate - Réponse sous 24h',
     },
   ],
 }

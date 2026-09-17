@@ -29,7 +29,7 @@ export function ContactSection({ section }: ContactSectionProps) {
           <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
             <div className="contact-form__grid">
               <label>
-                <span>Nom et Prenom</span>
+                <span>Nom et Prénom</span>
                 <input type="text" placeholder="ex. Alan Turing" required />
               </label>
               <label>
@@ -39,12 +39,12 @@ export function ContactSection({ section }: ContactSectionProps) {
             </div>
 
             <label>
-              <span>Objet / Type d opportunite</span>
+              <span>Objet / Type d’opportunité</span>
               <select>
-                <option>Stage de Fin d Etudes (6 mois)</option>
-                <option>Premier Emploi CDI (Developpeur C++ / Backend)</option>
+                <option>Stage de Fin d’Études (6 mois)</option>
+                <option>Premier Emploi CDI (Développeur C++ / Backend)</option>
                 <option>Mission Freelance Technique</option>
-                <option>Autre echange technique</option>
+                <option>Autre échange technique</option>
               </select>
             </label>
 
@@ -52,7 +52,7 @@ export function ContactSection({ section }: ContactSectionProps) {
               <span>Message</span>
               <textarea
                 rows={4}
-                placeholder="Presentez brievement vos besoins ou votre environnement technique..."
+                placeholder="Présentez brièvement vos besoins ou votre environnement technique..."
                 required
               />
             </label>

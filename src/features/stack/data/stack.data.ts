@@ -2,10 +2,10 @@ import type { StackSectionData } from '../types/stack.types'
 import { STACK_ICONS } from './stack-icons.data'
 
 export const STACK_SECTION: StackSectionData = {
-  kicker: 'Competences',
+  kicker: 'Compétences',
   title: 'Stack & Technologies',
   description:
-    'Competences articulees autour de la rigueur de la programmation systeme bas niveau, des architectures web modernes et de l outillage d ingenierie logicielle.',
+    'Compétences articulées autour de la rigueur de la programmation système bas niveau, des architectures web modernes et de l’outillage d’ingénierie logicielle.',
   technologies: [
     { name: 'C', badge: 'C', iconSvg: STACK_ICONS.C },
     { name: 'C++', badge: 'C+', iconSvg: STACK_ICONS['C++'] },

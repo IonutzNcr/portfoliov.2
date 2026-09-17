@@ -7,7 +7,7 @@ import type {
 
 export const HEADER_NAV_LINKS: NavigationLink[] = [
   { label: 'Profil', href: '#profil' },
-  { label: 'Competences', href: '#competences' },
+  { label: 'Compétences', href: '#competences' },
   { label: 'Projets', href: '#projets' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -20,44 +20,44 @@ export const HEADER_SOCIAL_LINKS: SocialLink[] = [
 export const PROFILE_HERO: ProfileHeroData = {
   initials: 'IN',
   name: 'Ionut Nicoara',
-  school: 'Ecole 42 Paris',
-  availability: "Etudiant 42 Paris · Disponible stage fin d'etudes",
-  role: 'Developpeur polyvalent',
+  school: 'École 42 Paris',
+  availability: 'Étudiant 42 Paris · Disponible stage fin d’études',
+  role: 'Développeur polyvalent',
   summary:
-    'Forme a l exigence methodique de l Ecole 42: autonomie, peer learning et attention particuliere portee a la qualite et a la fiabilite du code. Developpeur polyvalent, a l aise aussi bien avec des langages bas niveau comme le C et le C++ qu avec des technologies haut niveau telles que TypeScript/JavaScript, PHP et Python.',
+    'Formé à l’exigence méthodique de l’École 42 : autonomie, peer learning et attention particulière portée à la qualité et à la fiabilité du code. Développeur polyvalent, à l’aise aussi bien avec des langages bas niveau comme le C et le C++ qu’avec des technologies haut niveau telles que TypeScript/JavaScript, PHP et Python.',
   profileImageSrc: '/profile-headshot.jpg',
-  profileImageAlt: 'Alexandre Laurent - Developpeur Ecole 42',
-  primaryAction: { label: "Discuter d'une opportunite", href: '#contact' },
-  secondaryAction: { label: 'Telecharger CV (PDF)', href: '#contact' },
+  profileImageAlt: 'Alexandre Laurent - Développeur École 42',
+  primaryAction: { label: 'Discuter d’une opportunité', href: '#contact' },
+  secondaryAction: { label: 'Télécharger CV (PDF)', href: '#contact' },
 }
 
 export const SOFT_SKILLS: SoftSkillCard[] = [
   {
-    title: 'Perseverance',
-    category: 'Soft Skill · Resilience',
+    title: 'Persévérance',
+    category: 'Soft Skill · Résilience',
     icon: 'psychology',
     description:
-      'Va toujours au bout des projets les plus ardus. Face aux bugs complexes, aux impasses techniques ou aux architectures denses, capacite eprouvee a investiguer methodiquement jusqu a la resolution complete sans compromis sur la qualite.',
+      'Va toujours au bout des projets les plus ardus. Face aux bugs complexes, aux impasses techniques ou aux architectures denses, capacité éprouvée à investiguer méthodiquement jusqu’à la résolution complète sans compromis sur la qualité.',
   },
   {
-    title: 'Curiosite',
+    title: 'Curiosité',
     category: 'Soft Skill · Veille & Exploration',
     icon: 'explore',
     description:
-      "Toujours en quete d apprentissage et de nouveautes. Passionne par la comprehension intime des mecanismes sous le capot (OS, protocoles, bas-niveau) tout en explorant activement les nouveaux paradigmes et outils modernes.",
+      'Toujours en quête d’apprentissage et de nouveautés. Passionné par la compréhension intime des mécanismes sous le capot (OS, protocoles, bas-niveau) tout en explorant activement les nouveaux paradigmes et outils modernes.',
   },
   {
     title: 'Communication',
-    category: 'Soft Skill · Impact & Clarte',
+    category: 'Soft Skill · Impact & Clarté',
     icon: 'forum',
     description:
-      'Formule et pose les bonnes problematiques avant de coder. Capacite a expliciter clairement des concepts techniques ardus lors des peer-reviews, a vulgariser pour les parties prenantes et a favoriser un dialogue constructif en equipe.',
+      'Formule et pose les bonnes problématiques avant de coder. Capacité à expliciter clairement des concepts techniques ardus lors des peer-reviews, à vulgariser pour les parties prenantes et à favoriser un dialogue constructif en équipe.',
   },
   {
     title: 'Autonomie',
-    category: 'Soft Skill · Methodologie 42',
+    category: 'Soft Skill · Méthodologie 42',
     icon: 'terminal',
     description:
-      "Recherche autonome et rigoureuse. Forge a l apprentissage autodidacte par la lecture de RFC, documentation officielle et code source, capable de monter en competence rapidement sur n importe quel ecosysteme en totale independance.",
+      'Recherche autonome et rigoureuse. Forgé à l’apprentissage autodidacte par la lecture de RFC, documentation officielle et code source, capable de monter en compétence rapidement sur n’importe quel écosystème en totale indépendance.',
   },
 ]
