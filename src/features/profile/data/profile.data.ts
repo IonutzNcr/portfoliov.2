@@ -34,7 +34,7 @@ export const PROFILE_CONTENT: Record<PortfolioLanguage, ProfileContent> = {
       name: 'Ionut Nicoara',
       school: 'École 42 Paris',
       availability: 'Étudiant 42 Paris · Disponible stage fin d’études',
-      role: 'Développeur polyvalent',
+      role: 'Développeur web et logiciel',
       summary:
         'Formé à l’exigence méthodique de l’École 42 : autonomie, peer learning et attention particulière portée à la qualité et à la fiabilité du code. Développeur polyvalent, à l’aise aussi bien avec des langages bas niveau comme le C et le C++ qu’avec des technologies haut niveau telles que TypeScript/JavaScript, PHP et Python.',
       profileImageSrc: '/profile-headshot.jpg',

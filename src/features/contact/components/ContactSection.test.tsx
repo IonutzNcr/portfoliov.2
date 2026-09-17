@@ -10,8 +10,8 @@ vi.mock('@emailjs/browser', () => ({
 
 describe('ContactSection', () => {
   beforeEach(() => {
-    vi.stubEnv('VITE_EMAILJS_PUBLIC_KEY', '_I4OpWfnzzlvT4kVc')
-    vi.stubEnv('VITE_EMAILJS_SERVICE_ID', 'service_vosj0kz')
+    vi.stubEnv('VITE_EMAILJS_PUBLIC_KEY', 'AvMQiUBKf-TLhSN1h')
+    vi.stubEnv('VITE_EMAILJS_SERVICE_ID', 'service_ny95gyf')
     vi.stubEnv('VITE_EMAILJS_TEMPLATE_ID', 'template_cjz3pis')
     vi.mocked(init).mockImplementation(() => undefined)
     vi.mocked(sendForm).mockResolvedValue({ status: 200, text: 'OK' })
@@ -35,7 +35,7 @@ describe('ContactSection', () => {
   it('sends the contact form with EmailJS config from env', async () => {
     render(<ContactSection section={CONTACT_SECTION_CONTENT.fr} />)
 
-    expect(init).toHaveBeenCalledWith({ publicKey: '_I4OpWfnzzlvT4kVc' })
+    expect(init).toHaveBeenCalledWith({ publicKey: 'AvMQiUBKf-TLhSN1h' })
 
     fireEvent.change(screen.getByLabelText(/Nom et Prénom/i), {
       target: { value: 'Alan Turing' },
@@ -57,7 +57,7 @@ describe('ContactSection', () => {
     expect(submittedForm).not.toBeNull()
 
     expect(sendForm).toHaveBeenCalledWith(
-      'service_vosj0kz',
+      'service_ny95gyf',
       'template_cjz3pis',
       submittedForm,
     )
