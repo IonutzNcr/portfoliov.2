@@ -9,7 +9,7 @@ Step 1:
     [x] github transcendance project: https://github.com/IonutzNcr/-Transcendence-
 
 Step 2:
-[] take note in a file placeholder.md all placeholder that should be changed with true content
+[x] take note in a file placeholder.md all placeholder that should be changed with true content
 
 Step 3:
 [] Make some test to check responsiveness
@@ -22,3 +22,9 @@ step 5:
 [] Responsive
     [] profile Page should be align in center when the screen is small e.g iphone and small tablette
     [] also the squares for language and technologies should be smaller when small screen
+
+Step 6
+[] Others
+    [] change the avatar with the image in /public dir called avatar
+    [] charge the cv into the project and make another version in english
+    
