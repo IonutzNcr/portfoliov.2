@@ -26,5 +26,13 @@ describe('SiteHeader', () => {
     expect(screen.getByRole('link', { name: /Compétences/i })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Me contacter/i })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /Language selector/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /GitHub/i })).toHaveAttribute(
+      'href',
+      'https://github.com/IonutzNcr',
+    )
+    expect(screen.getByRole('link', { name: /LinkedIn/i })).toHaveAttribute(
+      'href',
+      'https://www.linkedin.com/in/ionut-nicoara/',
+    )
   })
 })

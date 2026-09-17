@@ -79,8 +79,8 @@ export const FOOTER_CONTENT: Record<PortfolioLanguage, FooterData> = {
     copyright: '© 2026. Ionut Nicoara',
     navAriaLabel: 'Liens de pied de page',
     links: [
-      { label: 'GitHub', href: 'https://github.com' },
-      { label: 'LinkedIn', href: 'https://linkedin.com' },
+      { label: 'GitHub', href: 'https://github.com/IonutzNcr' },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ionut-nicoara/' },
       { label: 'Haut de page', href: '#profil' },
     ],
   },
@@ -88,8 +88,8 @@ export const FOOTER_CONTENT: Record<PortfolioLanguage, FooterData> = {
     copyright: '© 2026. Ionut Nicoara',
     navAriaLabel: 'Footer links',
     links: [
-      { label: 'GitHub', href: 'https://github.com' },
-      { label: 'LinkedIn', href: 'https://linkedin.com' },
+      { label: 'GitHub', href: 'https://github.com/IonutzNcr' },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ionut-nicoara/' },
       { label: 'Back to top', href: '#profil' },
     ],
   },

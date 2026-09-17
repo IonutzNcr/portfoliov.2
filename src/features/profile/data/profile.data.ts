@@ -15,8 +15,8 @@ type ProfileContent = {
 }
 
 export const HEADER_SOCIAL_LINKS: SocialLink[] = [
-  { label: 'GitHub', href: 'https://github.com', icon: 'terminal' },
-  { label: 'LinkedIn', href: 'https://linkedin.com', icon: 'share' },
+  { label: 'GitHub', href: 'https://github.com/IonutzNcr', icon: 'terminal' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ionut-nicoara/', icon: 'share' },
 ]
 
 export const PROFILE_CONTENT: Record<PortfolioLanguage, ProfileContent> = {

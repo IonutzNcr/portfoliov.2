@@ -7,8 +7,14 @@ describe('SiteFooter', () => {
     render(<SiteFooter footer={FOOTER_CONTENT.fr} />)
 
     expect(screen.getByText(/2026\. Ionut Nicoara/i)).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /GitHub/i })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /LinkedIn/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /GitHub/i })).toHaveAttribute(
+      'href',
+      'https://github.com/IonutzNcr',
+    )
+    expect(screen.getByRole('link', { name: /LinkedIn/i })).toHaveAttribute(
+      'href',
+      'https://www.linkedin.com/in/ionut-nicoara/',
+    )
     expect(screen.getByRole('link', { name: /Haut de page/i })).toBeInTheDocument()
   })
 })
