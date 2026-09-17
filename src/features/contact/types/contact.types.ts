@@ -16,6 +16,10 @@ export type ContactSectionData = {
     messageLabel: string
     messagePlaceholder: string
     submitLabel: string
+    sendingLabel: string
+    successMessage: string
+    errorMessage: string
+    configErrorMessage: string
     subjectOptions: string[]
   }
 }

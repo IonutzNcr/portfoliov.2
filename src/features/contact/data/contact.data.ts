@@ -29,6 +29,10 @@ export const CONTACT_SECTION_CONTENT: Record<PortfolioLanguage, ContactSectionDa
       messageLabel: 'Message',
       messagePlaceholder: 'Présentez brièvement vos besoins ou votre environnement technique...',
       submitLabel: 'Envoyer le message',
+      sendingLabel: 'Envoi en cours...',
+      successMessage: 'Merci, votre message a bien été envoyé.',
+      errorMessage: 'Impossible d\'envoyer le message pour le moment. Merci de réessayer.',
+      configErrorMessage: 'Le formulaire de contact n\'est pas configuré correctement.',
       subjectOptions: [
         'Stage de Fin d’Études (6 mois)',
         'Premier Emploi CDI (Développeur C++ / Backend)',
@@ -64,6 +68,10 @@ export const CONTACT_SECTION_CONTENT: Record<PortfolioLanguage, ContactSectionDa
       messageLabel: 'Message',
       messagePlaceholder: 'Briefly describe your needs or technical environment...',
       submitLabel: 'Send message',
+      sendingLabel: 'Sending...',
+      successMessage: 'Thank you, your message has been sent.',
+      errorMessage: 'Unable to send your message right now. Please try again.',
+      configErrorMessage: 'The contact form is not configured correctly.',
       subjectOptions: [
         'Final internship (6 months)',
         'First full-time role (C++ / Backend Developer)',
