@@ -12,19 +12,25 @@ Step 2:
 [x] take note in a file placeholder.md all placeholder that should be changed with true content
 
 Step 3:
-[] Make some test to check responsiveness
+[x] Make some test to check responsiveness
 
 Step 4:
 [] Link the contact with my data as wel as the mail service.
 
 
 step 5:
-[] Responsive
-    [] profile Page should be align in center when the screen is small e.g iphone and small tablette
-    [] also the squares for language and technologies should be smaller when small screen
+[x] Responsive
+    [x] profile Page should be align in center when the screen is small e.g iphone and small tablette
+    [x] also the squares for language and technologies should be smaller when small screen
 
 Step 6
 [] Others
     [] change the avatar with the image in /public dir called avatar
     [] charge the cv into the project and make another version in english
-    
+    [] image pour illustrer figma et php et casse ...
+
+step 7
+[] SEO
+
+step 8 ce que l'IA n'est pas capable et donc je devrais le faire ...
+[] fix le navbar en mode responsive pour que le bouton me contacter ne soit plus visuellement coupe...
