@@ -1,7 +1,12 @@
-import { render, screen, within } from '@testing-library/react'
+import { fireEvent, render, screen, within } from '@testing-library/react'
 import HomePage from './HomePage'
 
 describe('HomePage', () => {
+  beforeEach(() => {
+    window.localStorage.clear()
+    document.documentElement.lang = 'en'
+  })
+
   it('renders all sections, key navigation links and contact form fields', () => {
     render(<HomePage />)
 
@@ -33,5 +38,29 @@ describe('HomePage', () => {
     expect(screen.getByLabelText(/Objet \/ Type d’opportunité/i)).toBeInTheDocument()
     expect(screen.getByLabelText(/Message/i)).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /Envoyer le message/i })).toBeInTheDocument()
+  })
+
+  it('switches portfolio content language from French to English', () => {
+    render(<HomePage />)
+
+    fireEvent.click(screen.getByRole('button', { name: /Language selector/i }))
+    fireEvent.click(screen.getByRole('option', { name: /English/i }))
+
+    expect(screen.getByRole('link', { name: /Skip to main content/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Selected Projects/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Send message/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Contact me/i })).toBeInTheDocument()
+    expect(window.localStorage.getItem('portfolio.language')).toBe('en')
+    expect(document.documentElement.lang).toBe('en')
+  })
+
+  it('restores persisted language from localStorage on first render', () => {
+    window.localStorage.setItem('portfolio.language', 'en')
+
+    render(<HomePage />)
+
+    expect(screen.getByRole('link', { name: /Skip to main content/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Selected Projects/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Send message/i })).toBeInTheDocument()
   })
 })

@@ -9,5 +9,6 @@ export type ProjectsSectionData = {
   kicker: string
   title: string
   description: string
+  repositoryLabel: string
   items: ProjectItem[]
 }

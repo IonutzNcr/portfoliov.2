@@ -9,7 +9,7 @@ export function SiteFooter({ footer }: SiteFooterProps) {
     <footer className="site-footer">
       <div className="site-footer__inner">
         <p>{footer.copyright}</p>
-        <nav aria-label="Footer links">
+        <nav aria-label={footer.navAriaLabel}>
           {footer.links.map((link) => (
             <a
               key={link.label}

@@ -8,5 +8,6 @@ export type StackSectionData = {
   kicker: string
   title: string
   description: string
+  gridAriaLabel?: string
   technologies: StackTechnology[]
 }

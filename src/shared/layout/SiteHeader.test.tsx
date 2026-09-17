@@ -1,17 +1,23 @@
 import { render, screen } from '@testing-library/react'
 import { SiteHeader } from './SiteHeader'
-import { HEADER_NAV_LINKS, HEADER_SOCIAL_LINKS, PROFILE_HERO } from '../../features/profile/data/profile.data'
+import { HEADER_SOCIAL_LINKS, PROFILE_CONTENT } from '../../features/profile/data/profile.data'
 
 describe('SiteHeader', () => {
   it('renders identity, navigation, and contact action', () => {
+    const profile = PROFILE_CONTENT.fr
+
     render(
       <SiteHeader
-        name={PROFILE_HERO.name}
-        school={PROFILE_HERO.school}
-        initials={PROFILE_HERO.initials}
-        navLinks={HEADER_NAV_LINKS}
+        name={profile.hero.name}
+        school={profile.hero.school}
+        initials={profile.hero.initials}
+        navLinks={profile.navLinks}
         socialLinks={HEADER_SOCIAL_LINKS}
         contactHref="#contact"
+        contactLabel={profile.contactButtonLabel}
+        language="fr"
+        languageLabel="Français"
+        onLanguageChange={() => {}}
       />,
     )
 
@@ -19,5 +25,6 @@ describe('SiteHeader', () => {
     expect(screen.getByRole('link', { name: /Profil/i })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Compétences/i })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Me contacter/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Language selector/i })).toBeInTheDocument()
   })
 })

@@ -14,7 +14,7 @@ export function StackSection({ section }: StackSectionProps) {
           <p>{section.description}</p>
         </div>
 
-        <div className="stack-section__grid" aria-label="Stack and technologies">
+        <div className="stack-section__grid" aria-label={section.gridAriaLabel ?? 'Stack and technologies'}>
           {section.technologies.map((technology) => (
             <article key={technology.name} className="stack-card">
               {technology.iconSvg ? (

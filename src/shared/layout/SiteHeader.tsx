@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import type { NavigationLink, SocialLink } from '../../features/profile/types/profile.types'
+import type { PortfolioLanguage } from '../../types/i18n'
 
 type SiteHeaderProps = {
   name: string
@@ -7,6 +9,10 @@ type SiteHeaderProps = {
   navLinks: NavigationLink[]
   socialLinks: SocialLink[]
   contactHref: string
+  contactLabel: string
+  language: PortfolioLanguage
+  languageLabel: string
+  onLanguageChange: (value: PortfolioLanguage) => void
 }
 
 export function SiteHeader({
@@ -16,7 +22,18 @@ export function SiteHeader({
   navLinks,
   socialLinks,
   contactHref,
+  contactLabel,
+  language,
+  languageLabel,
+  onLanguageChange,
 }: SiteHeaderProps) {
+  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false)
+
+  const selectLanguage = (value: PortfolioLanguage) => {
+    onLanguageChange(value)
+    setIsLanguageMenuOpen(false)
+  }
+
   return (
     <header className="site-header">
       <div className="site-header__inner">
@@ -37,6 +54,43 @@ export function SiteHeader({
         </nav>
 
         <div className="site-header__actions">
+          <div className="language-switcher">
+            <button
+              type="button"
+              className="language-switcher__trigger"
+              aria-haspopup="listbox"
+              aria-expanded={isLanguageMenuOpen}
+              aria-label="Language selector"
+              onClick={() => setIsLanguageMenuOpen((current) => !current)}
+            >
+              <span className="material-symbols-outlined" aria-hidden="true">
+                language
+              </span>
+              <span>{languageLabel}</span>
+            </button>
+
+            {isLanguageMenuOpen ? (
+              <div className="language-switcher__menu" role="listbox" aria-label="Language selector options">
+                <button
+                  type="button"
+                  role="option"
+                  aria-selected={language === 'fr'}
+                  onClick={() => selectLanguage('fr')}
+                >
+                  Français
+                </button>
+                <button
+                  type="button"
+                  role="option"
+                  aria-selected={language === 'en'}
+                  onClick={() => selectLanguage('en')}
+                >
+                  English
+                </button>
+              </div>
+            ) : null}
+          </div>
+
           {socialLinks.map((item) => (
             <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer">
               <span className="material-symbols-outlined" aria-hidden="true">
@@ -46,7 +100,7 @@ export function SiteHeader({
             </a>
           ))}
           <a className="site-header__contact" href={contactHref}>
-            Me contacter
+            {contactLabel}
           </a>
         </div>
       </div>

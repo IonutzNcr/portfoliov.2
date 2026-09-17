@@ -23,7 +23,7 @@ export function ProjectsSection({ section }: ProjectsSectionProps) {
                 <p>{item.summary}</p>
               </div>
               <a href={item.repositoryUrl} target="_blank" rel="noopener noreferrer">
-                Dépôt
+                {section.repositoryLabel}
                 <span className="material-symbols-outlined" aria-hidden="true">
                   arrow_outward
                 </span>

@@ -8,7 +8,7 @@ describe('App', () => {
     expect(screen.getByTestId('home-page')).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /Ionut Nicoara/i })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /Stack & Technologies/i })).toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: /Projets Sélectionnés/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Projets Sélectionnés|Selected Projects/i })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /Discutons de vos projets/i })).toBeInTheDocument()
   })
 })

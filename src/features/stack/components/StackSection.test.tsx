@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
-import { STACK_SECTION } from '../data/stack.data'
+import { STACK_SECTION_CONTENT } from '../data/stack.data'
 import { StackSection } from './StackSection'
 
 describe('StackSection', () => {
   it('renders title and all technologies', () => {
-    render(<StackSection section={STACK_SECTION} />)
+    render(<StackSection section={STACK_SECTION_CONTENT.fr} />)
 
     expect(screen.getByRole('heading', { name: /Stack & Technologies/i })).toBeInTheDocument()
     expect(screen.getByText(/Compétences articulées/i)).toBeInTheDocument()

@@ -29,36 +29,35 @@ export function ContactSection({ section }: ContactSectionProps) {
           <form className="contact-form" onSubmit={(event) => event.preventDefault()}>
             <div className="contact-form__grid">
               <label>
-                <span>Nom et Prénom</span>
+                <span>{section.form.fullNameLabel}</span>
                 <input type="text" placeholder="ex. Alan Turing" required />
               </label>
               <label>
-                <span>Email professionnel</span>
+                <span>{section.form.emailLabel}</span>
                 <input type="email" placeholder="alexandre@entreprise.fr" required />
               </label>
             </div>
 
             <label>
-              <span>Objet / Type d’opportunité</span>
+              <span>{section.form.subjectLabel}</span>
               <select>
-                <option>Stage de Fin d’Études (6 mois)</option>
-                <option>Premier Emploi CDI (Développeur C++ / Backend)</option>
-                <option>Mission Freelance Technique</option>
-                <option>Autre échange technique</option>
+                {section.form.subjectOptions.map((option) => (
+                  <option key={option}>{option}</option>
+                ))}
               </select>
             </label>
 
             <label>
-              <span>Message</span>
+              <span>{section.form.messageLabel}</span>
               <textarea
                 rows={4}
-                placeholder="Présentez brièvement vos besoins ou votre environnement technique..."
+                placeholder={section.form.messagePlaceholder}
                 required
               />
             </label>
 
             <button type="submit">
-              <span>Envoyer le message</span>
+              <span>{section.form.submitLabel}</span>
               <span className="material-symbols-outlined" aria-hidden="true">
                 send
               </span>

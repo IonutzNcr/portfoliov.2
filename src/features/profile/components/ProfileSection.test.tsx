@@ -1,10 +1,11 @@
 import { render, screen } from '@testing-library/react'
 import { ProfileSection } from './ProfileSection'
-import { PROFILE_HERO, SOFT_SKILLS } from '../data/profile.data'
+import { PROFILE_CONTENT } from '../data/profile.data'
 
 describe('ProfileSection', () => {
   it('renders hero and soft skills cards', () => {
-    render(<ProfileSection hero={PROFILE_HERO} skills={SOFT_SKILLS} />)
+    const content = PROFILE_CONTENT.fr
+    render(<ProfileSection hero={content.hero} skills={content.softSkills} />)
 
     expect(screen.getByRole('heading', { name: /Ionut Nicoara/i })).toBeInTheDocument()
     expect(screen.getByText(/^Développeur polyvalent$/i)).toBeInTheDocument()

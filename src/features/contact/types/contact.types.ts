@@ -9,10 +9,20 @@ export type ContactSectionData = {
   title: string
   description: string
   details: ContactInfo[]
+  form: {
+    fullNameLabel: string
+    emailLabel: string
+    subjectLabel: string
+    messageLabel: string
+    messagePlaceholder: string
+    submitLabel: string
+    subjectOptions: string[]
+  }
 }
 
 export type FooterData = {
   copyright: string
+  navAriaLabel: string
   links: Array<{
     label: string
     href: string
