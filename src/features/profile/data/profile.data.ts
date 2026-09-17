@@ -38,9 +38,13 @@ export const PROFILE_CONTENT: Record<PortfolioLanguage, ProfileContent> = {
       summary:
         'Formé à l’exigence méthodique de l’École 42 : autonomie, peer learning et attention particulière portée à la qualité et à la fiabilité du code. Développeur polyvalent, à l’aise aussi bien avec des langages bas niveau comme le C et le C++ qu’avec des technologies haut niveau telles que TypeScript/JavaScript, PHP et Python.',
       profileImageSrc: '/profile-headshot.jpg',
-      profileImageAlt: 'Alexandre Laurent - Développeur École 42',
+      profileImageAlt: 'Ionut Nicoara - Développeur École 42',
       primaryAction: { label: 'Discuter d’une opportunité', href: '#contact' },
-      secondaryAction: { label: 'Télécharger CV (PDF)', href: '#contact' },
+      secondaryAction: {
+        label: 'Télécharger CV (PDF)',
+        href: '/ionutn_cv_fr.pdf',
+        downloadName: 'ionut-nicoara-cv-fr.pdf',
+      },
     },
     softSkills: [
       {
@@ -91,9 +95,13 @@ export const PROFILE_CONTENT: Record<PortfolioLanguage, ProfileContent> = {
       summary:
         'Trained with the methodological discipline of 42 School: autonomy, peer learning, and a strong focus on code quality and reliability. I am comfortable with both low-level languages such as C and C++, and high-level technologies such as TypeScript/JavaScript, PHP, and Python.',
       profileImageSrc: '/profile-headshot.jpg',
-      profileImageAlt: 'Alexandre Laurent - 42 School developer',
+      profileImageAlt: 'Ionut Nicoara - 42 School developer',
       primaryAction: { label: 'Discuss an opportunity', href: '#contact' },
-      secondaryAction: { label: 'Download resume (PDF)', href: '#contact' },
+      secondaryAction: {
+        label: 'Download resume (PDF)',
+        href: '/ionutn_cv_en.pdf',
+        downloadName: 'ionut-nicoara-cv-en.pdf',
+      },
     },
     softSkills: [
       {

@@ -27,7 +27,11 @@ export function ProfileSection({ hero, skills }: ProfileSectionProps) {
               <a className="profile-section__cta--primary" href={hero.primaryAction.href}>
                 {hero.primaryAction.label}
               </a>
-              <a className="profile-section__cta--secondary" href={hero.secondaryAction.href}>
+              <a
+                className="profile-section__cta--secondary"
+                href={hero.secondaryAction.href}
+                download={hero.secondaryAction.downloadName}
+              >
                 {hero.secondaryAction.label}
               </a>
             </div>

@@ -1,6 +1,7 @@
 export type NavigationLink = {
   label: string
   href: string
+  downloadName?: string
 }
 
 export type SocialLink = {

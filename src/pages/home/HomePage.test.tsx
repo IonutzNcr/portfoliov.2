@@ -50,6 +50,14 @@ describe('HomePage', () => {
     expect(screen.getByRole('heading', { name: /Selected Projects/i })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /Send message/i })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Contact me/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Download resume \(PDF\)/i })).toHaveAttribute(
+      'href',
+      '/ionutn_cv_en.pdf',
+    )
+    expect(screen.getByRole('link', { name: /Download resume \(PDF\)/i })).toHaveAttribute(
+      'download',
+      'ionut-nicoara-cv-en.pdf',
+    )
     expect(window.localStorage.getItem('portfolio.language')).toBe('en')
     expect(document.documentElement.lang).toBe('en')
   })
