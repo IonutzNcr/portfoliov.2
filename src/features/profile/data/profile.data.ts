@@ -91,7 +91,7 @@ export const PROFILE_CONTENT: Record<PortfolioLanguage, ProfileContent> = {
       name: 'Ionut Nicoara',
       school: '42 Paris School',
       availability: '42 Paris student · Available for end-of-studies internship',
-      role: 'Versatile developer',
+      role: 'Web and software developer',
       summary:
         'Trained with the methodological discipline of 42 School: autonomy, peer learning, and a strong focus on code quality and reliability. I am comfortable with both low-level languages such as C and C++, and high-level technologies such as TypeScript/JavaScript, PHP, and Python.',
       profileImageSrc: '/profile-headshot.jpg',
