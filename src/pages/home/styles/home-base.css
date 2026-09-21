@@ -1,3 +1,13 @@
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,6 +16,7 @@
   min-height: 100vh;
   background: #090d1a;
   color: #f8fafc;
+  overflow-x: hidden;
 }
 
 .skip-link {

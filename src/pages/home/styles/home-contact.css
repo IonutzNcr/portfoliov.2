@@ -23,11 +23,18 @@
   color: #cbd5e1;
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
+  min-width: 0;
 }
 
 .contact-section__copy a {
   color: #cbd5e1;
   text-decoration: none;
+}
+
+.contact-section__copy a,
+.contact-section__copy span {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contact-icon {
