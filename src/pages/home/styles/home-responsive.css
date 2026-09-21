@@ -1,0 +1,197 @@
+@media (max-width: 1024px) {
+  .profile-section__hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .profile-section__copy {
+    text-align: center;
+  }
+
+  .profile-section__cta {
+    justify-content: center;
+  }
+
+  .profile-section__skills {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stack-section__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .contact-section__container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 820px) {
+  .site-header__inner {
+    gap: 10px;
+  }
+
+  .site-header__brand {
+    min-width: 0;
+    gap: 10px;
+  }
+
+  .site-header__identity {
+    min-width: 0;
+  }
+
+  .site-header__name,
+  .site-header__school {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .site-header__nav {
+    display: none;
+  }
+
+  .site-header__actions > a:not(.site-header__contact) {
+    display: none;
+  }
+
+  .projects-section__grid,
+  .contact-form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stack-section__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .language-switcher__trigger {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+
+  .site-header__contact {
+    margin-left: 0;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header__inner,
+  .profile-section__container,
+  .stack-section__container,
+  .projects-section__container,
+  .contact-section__container,
+  .site-footer__inner {
+    padding: 0 16px;
+  }
+
+  .profile-section {
+    padding: 152px 0 56px;
+  }
+
+  .site-header__inner {
+    height: 72px;
+    gap: 8px;
+  }
+
+  .site-header__initials {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    font-size: 12px;
+  }
+
+  .site-header__brand {
+    gap: 8px;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .site-header__school {
+    display: none;
+  }
+
+  .site-header__name {
+    font-size: 13px;
+  }
+
+  .site-header__actions {
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .profile-section__hero,
+  .profile-section__copy {
+    text-align: center;
+  }
+
+  .profile-section__availability {
+    justify-content: center;
+  }
+
+  .profile-section__cta {
+    justify-content: center;
+  }
+
+  .profile-section__skills {
+    grid-template-columns: 1fr;
+  }
+
+  .stack-section__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stack-card {
+    padding: 16px;
+    border-radius: 10px;
+    gap: 8px;
+  }
+
+  .stack-card__icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .stack-card__badge {
+    width: 28px;
+    height: 28px;
+    font-size: 10px;
+  }
+
+  .stack-card__name {
+    font-size: 12px;
+  }
+
+  .language-switcher__trigger {
+    padding: 4px 6px;
+    border-radius: 7px;
+    font-size: 10px;
+  }
+
+  .site-header__contact {
+    margin-left: 0;
+    padding: 5px 6px;
+    border-radius: 7px;
+    font-size: 11px;
+  }
+
+  .language-switcher__trigger .material-symbols-outlined {
+    font-size: 14px;
+  }
+
+  .projects-section,
+  .contact-section {
+    padding: 72px 0 88px;
+  }
+
+  .contact-section__form-wrap {
+    padding: 24px;
+  }
+}

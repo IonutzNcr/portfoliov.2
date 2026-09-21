@@ -1,9 +1,27 @@
 import { readFileSync } from 'node:fs'
-import { resolve } from 'node:path'
+import { dirname, resolve } from 'node:path'
+
+function loadCssWithImports(entryPath: string): string {
+  const css = readFileSync(entryPath, 'utf8')
+  const importRegex = /@import\s+['\"](.+?)['\"];?/g
+  const chunks: string[] = []
+  let lastIndex = 0
+  let match: RegExpExecArray | null
+
+  while ((match = importRegex.exec(css)) !== null) {
+    chunks.push(css.slice(lastIndex, match.index))
+    const importedPath = resolve(dirname(entryPath), match[1])
+    chunks.push(loadCssWithImports(importedPath))
+    lastIndex = importRegex.lastIndex
+  }
+
+  chunks.push(css.slice(lastIndex))
+  return chunks.join('\n')
+}
 
 describe('HomePage responsive styles', () => {
   const cssPath = resolve(import.meta.dirname, 'HomePage.css')
-  const css = readFileSync(cssPath, 'utf8')
+  const css = loadCssWithImports(cssPath)
 
   it('centers the profile hero on tablet and mobile breakpoints', () => {
     expect(css).toMatch(/@media \(max-width: 1024px\)[\s\S]*?\.profile-section__hero \{[\s\S]*?align-items: center;/)
