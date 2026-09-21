@@ -24,7 +24,9 @@ export const CONTACT_SECTION_CONTENT: Record<PortfolioLanguage, ContactSectionDa
     ],
     form: {
       fullNameLabel: 'Nom et Prénom',
+      fullNamePlaceholder: 'ex. Ada Lovelace',
       emailLabel: 'Email professionnel',
+      emailPlaceholder: 'nom@entreprise.fr',
       subjectLabel: 'Objet / Type d’opportunité',
       messageLabel: 'Message',
       messagePlaceholder: 'Présentez brièvement vos besoins ou votre environnement technique...',
@@ -39,6 +41,12 @@ export const CONTACT_SECTION_CONTENT: Record<PortfolioLanguage, ContactSectionDa
         'Mission Freelance Technique',
         'Autre échange technique',
       ],
+      validation: {
+        fullNameRequired: 'Merci de renseigner votre nom et prénom.',
+        emailRequired: 'Merci de renseigner votre email professionnel.',
+        emailInvalid: 'Merci de saisir une adresse email valide.',
+        messageRequired: 'Merci de renseigner votre message.',
+      },
     },
   },
   en: {
@@ -63,7 +71,9 @@ export const CONTACT_SECTION_CONTENT: Record<PortfolioLanguage, ContactSectionDa
     ],
     form: {
       fullNameLabel: 'Full name',
+      fullNamePlaceholder: 'e.g. Alan Turing',
       emailLabel: 'Professional email',
+      emailPlaceholder: 'alex@company.com',
       subjectLabel: 'Subject / Opportunity type',
       messageLabel: 'Message',
       messagePlaceholder: 'Briefly describe your needs or technical environment...',
@@ -78,6 +88,12 @@ export const CONTACT_SECTION_CONTENT: Record<PortfolioLanguage, ContactSectionDa
         'Technical freelance mission',
         'Other technical discussion',
       ],
+      validation: {
+        fullNameRequired: 'Please enter your full name.',
+        emailRequired: 'Please enter your professional email.',
+        emailInvalid: 'Please enter a valid email address.',
+        messageRequired: 'Please enter your message.',
+      },
     },
   },
 }

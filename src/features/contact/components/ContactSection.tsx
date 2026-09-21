@@ -48,6 +48,23 @@ export function ContactSection({ section }: ContactSectionProps) {
   const [statusMessage, setStatusMessage] = useState('')
   const isSending = submitState === 'sending'
 
+  function applyValidationMessage(field: HTMLInputElement | HTMLTextAreaElement) {
+    const requiredMessage = field.dataset.requiredMessage
+    const typeMismatchMessage = field.dataset.typeMismatchMessage
+
+    if (field.validity.valueMissing && requiredMessage) {
+      field.setCustomValidity(requiredMessage)
+      return
+    }
+
+    if (field.validity.typeMismatch && typeMismatchMessage) {
+      field.setCustomValidity(typeMismatchMessage)
+      return
+    }
+
+    field.setCustomValidity('')
+  }
+
   useEffect(() => {
     const emailJsConfig = getEmailJsConfig()
 
@@ -131,10 +148,17 @@ export function ContactSection({ section }: ContactSectionProps) {
                 <input
                   type="text"
                   name="nom"
-                  placeholder="ex. Alan Turing"
+                  placeholder={section.form.fullNamePlaceholder}
                   autoComplete="name"
+                  data-required-message={section.form.validation.fullNameRequired}
                   required
                   disabled={isSending}
+                  onInvalid={(event) => {
+                    applyValidationMessage(event.currentTarget)
+                  }}
+                  onInput={(event) => {
+                    event.currentTarget.setCustomValidity('')
+                  }}
                 />
               </label>
               <label>
@@ -142,10 +166,18 @@ export function ContactSection({ section }: ContactSectionProps) {
                 <input
                   type="email"
                   name="email"
-                  placeholder="alexandre@entreprise.fr"
+                  placeholder={section.form.emailPlaceholder}
                   autoComplete="email"
+                  data-required-message={section.form.validation.emailRequired}
+                  data-type-mismatch-message={section.form.validation.emailInvalid}
                   required
                   disabled={isSending}
+                  onInvalid={(event) => {
+                    applyValidationMessage(event.currentTarget)
+                  }}
+                  onInput={(event) => {
+                    event.currentTarget.setCustomValidity('')
+                  }}
                 />
               </label>
             </div>
@@ -165,8 +197,15 @@ export function ContactSection({ section }: ContactSectionProps) {
                 name="message"
                 rows={4}
                 placeholder={section.form.messagePlaceholder}
+                data-required-message={section.form.validation.messageRequired}
                 required
                 disabled={isSending}
+                onInvalid={(event) => {
+                  applyValidationMessage(event.currentTarget)
+                }}
+                onInput={(event) => {
+                  event.currentTarget.setCustomValidity('')
+                }}
               />
             </label>
 

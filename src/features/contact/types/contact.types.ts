@@ -11,7 +11,9 @@ export type ContactSectionData = {
   details: ContactInfo[]
   form: {
     fullNameLabel: string
+    fullNamePlaceholder: string
     emailLabel: string
+    emailPlaceholder: string
     subjectLabel: string
     messageLabel: string
     messagePlaceholder: string
@@ -21,6 +23,12 @@ export type ContactSectionData = {
     errorMessage: string
     configErrorMessage: string
     subjectOptions: string[]
+    validation: {
+      fullNameRequired: string
+      emailRequired: string
+      emailInvalid: string
+      messageRequired: string
+    }
   }
 }
 
